@@ -1,16 +1,36 @@
-body {
-  /*
-  font-size: 16px;
-  color: #fff;
-  background-color: #61122f;
-  font-family: 'Oxygen', sans-serif;
-  */
-}
+.en {display:none;} /* Hidding French*/
 
-/** HEADER **/
+/* BASE STYLE */
+body { 
+	width:90%; 
+	margin: 10px auto; 
+	border: 2px solid #000000; 
+	background-color: #fff; 
+	box-sizing: border-box;
+} 
 
+.cv_item_title {text-align: justify;}
+.institution {font-weight:bold;} 
+#CurrentSituation .place {color:red; text-align: right;}
+#CurrentSituation .date {color:blue; font-style: italic; text-align: right;}
+#Education .place {color:red; text-align: right;}
+#Education .date {color:blue; font-style: italic; text-align: right;}
+#Publications .date {font-weight:bold;}
+#Publications .place {font-style:default;}
+.div_clear { content: ''; display: block; clear: both;}
+.columnLeft { float: left; padding: 10px; width:80%}
+.columnRight { float: left; padding: 10px; width:20%}
 
-/* END HEADER */
+h3:hover, .date:hover, .place:hover, .cv_item_title:hover, .institution:hover {background-color: #eee}
+
+#header {border: none;}
+/* section {width:90%; padding: 0px 5px 0px 5px; border: 2px solid #000000;} */
+section {margin: 2.5% 5% 2.0% 5% ; padding: 5px 5px 5px 5px; border: 2px solid #000000;}
+
+/*@media (min-width:1200px) { body {width:1000px; border: 5px solid #000000;}  } */
+h1::first-letter {color: #f00;}
+.glyphicon {font-size: 1.2em;}
+
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
@@ -24,10 +44,10 @@ body {
 
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
-
 }
 
 /********** Extra small devices only **********/
 @media (max-width: 767px) {
-
+	.columnLeft{width:100%;}
+	.columnRight{width:100%;}
 }

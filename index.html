@@ -16,33 +16,7 @@
 	<style>
 		/* A CSS comment */
 		
-		body { width:90%; margin: 10px auto; border: 2px solid #000000; background-color: #fff; box-sizing: border-box;} /* base style */
-
-		.cv_item_title {text-align: justify;}
-		.institution {font-weight:bold;} 
-		#CurrentSituation .place {color:red; text-align: right;}
-		#CurrentSituation .date {color:blue; font-style: italic; text-align: right;}
-		#Education .place {color:red; text-align: right;}
-		#Education .date {color:blue; font-style: italic; text-align: right;}
-		#Publications .date {font-weight:bold;}
-		#Publications .place {font-style:default;}
-		.div_clear { content: ''; display: block; clear: both;}
-
-		.column {
-		  float: left;
-		  padding: 10px;
-		  /* height: 300px; */
-		}
-
-		h3:hover, .date:hover, .place:hover, .cv_item_title:hover, .institution:hover {background-color: #eee}
-
-		#header {border: none;}
-		/* section {width:90%; padding: 0px 5px 0px 5px; border: 2px solid #000000;} */
-		section {margin: 2.5% 5% 2.0% 5% ; padding: 5px 5px 5px 5px; border: 2px solid #000000;}
 		
-		/*@media (min-width:1200px) { body {width:1000px; border: 5px solid #000000;}  } */
-		h1::first-letter {color: #f00;}
-		.glyphicon {font-size: 1.2em;}
 
 		/* text-transform: uppercase */
 	</style>
@@ -69,17 +43,26 @@
 
 <section id="header">
 		<img src="res/Photo_CV.jpg" alt="my CV photo" height="200" style="float:left">
-		<div style="text-align: center;">
-				<div style="font-size:3em; font-family: Roboto, sans-serif; text-align: center">Antoine <b>Dupré</b></div>
-				<div style="color: #f00">Nuclear Instrumentation Engineer (PhD) · R&amp;D Expert</div>
-				<div>Address: Maltesergasse 4, 7000 Chur, Switzerland</div>
-				<div>Date and place of birth: 20/02/1991, Brétigny-sur-Orge (91), France</div>
-				<div>Citizenship: French</div>
-				<div> 	
-					<span class="glyphicon glyphicon-phone"></span> (+33) 752636622 | 
-					<span class="glyphicon glyphicon-envelope"></span> antoine.dupre@alumni.epfl.ch | 
-					<span class="glyphicon glyphicon-user"></span> <a href="http://www.researchgate.net/profile/Antoine_Dupre"> www.researchgate.net/profile/Antoine_Dupre </a> 
-				</div>
+		<div class="en" style="text-align: center;">
+			<!-- ENGLISH -->
+			<div style="font-size:3em; font-family: Roboto, sans-serif; text-align: center">Antoine <b>Dupré</b></div>
+			<div style="color: #f00">Nuclear Instrumentation Engineer (PhD) · R&amp;D Expert</div>
+			<div>Address: Maltesergasse 4, 7000 Chur, Switzerland</div>
+			<div >Date and place of birth: 20/02/1991, Brétigny-sur-Orge (91), France</div>
+			<div >Citizenship: French</div>
+		</div>
+		<div class="fr" style="text-align: center;">
+			<!-- FRANCAIS -->
+			<div style="font-size:3em; font-family: Roboto, sans-serif; text-align: center">Antoine <b>Dupré</b></div>
+			<div style="color: #f00">Ingénieur Instrumentation Nucléaire (PhD) · Expert R&amp;D</div>
+			<div>Addresse: Maltesergasse 4, 7000 Chur, Suisse</div>
+			<div >Date et lieu de naissance: 20/02/1991, Brétigny-sur-Orge (91), France</div>
+			<div >Nationalité: French</div>
+		</div>
+		<div style="text-align: center;"> 	
+			<span class="glyphicon glyphicon-phone"></span> (+33) 752636622 | 
+			<span class="glyphicon glyphicon-envelope"> antoine.dupre@alumni.epfl.ch </span>
+			<span class="glyphicon glyphicon-user"></span> <a href="http://www.researchgate.net/profile/Antoine_Dupre"> www.researchgate.net/profile/Antoine_Dupre </a> 
 		</div>
 		<div class="div_clear"> </div>
 </section>
@@ -87,14 +70,16 @@
 <hr>
 
 <section id="CurrentSituation"> 
-	<h1>Current Situation</h1> 
+	<h1 class="en">Current Situation</h1> 
+	<h1 class="fr">Situation Actuelle</h1> 
 	
-			<h3>Software and Algorithms Engineer</h3>
-			<div class="column" style="width:80%">
+			<h3 class="en">Software and Algorithms Engineer</h3>
+			<h3 class="fr">Ingénieur Logiciel et Algorithmes</h3>
+			<div class="columnLeft" >
 				<div class="institution">SenTec AG, EIT Branch, Switzerland</div>
 				<div class="cv_item_title">Research and Development of software and algorithms for the EIT lung monitoring system commercialised by SenTec AG.</div>
 			</div>
-			<div class="column" style="width:20%">
+			<div class="columnRight" >
 				<div class="place">Landquart, Switzerland</div>
 				<div class="date">Jul. 2019 - date</div>
 			</div>
@@ -106,7 +91,7 @@
 	<h1>Education</h1> 
 
 	<h3>Ph.D. in Instrumentation (R&D)</h3>
-	<div class="column" style="width:80%">
+	<div class="columnLeft" >
 		<div class="institution">Ecole Centrale Marseille (ECM) &amp; Atomic Energy Comission (CEA) Cadarache, France</div>
 		<div class="cv_item_title">
 			“Electrical Impedance Tomography for Void Fraction Measurements of Harsh Two-phase Flows: Prototype development and Reconstruction techniques”, thesis director: S. Bourennane (Institut FRESNEL, Marseille, France), supervisor: G. Ricciardi (CEA Cadarache, France).
@@ -115,28 +100,28 @@
 			<a href="https://drive.google.com/file/d/1mqeNkL1g8i0dkaE82SpIivQJDhHXWzpp/view" target="_blank">[diploma]</a>
 		</div>
 	</div>
-	<div class="column" style="width:20%">
+	<div class="columnRight" >
 		<div class="place">Cadarache, France</div>
 		<div class="date">Oct. 2014 - Sep. 2017 </div>
 	</div>
 	<div class="div_clear"> </div>
 					
 	<h3>M.Sc. in Nuclear Engineering</h3>	
-	<div class="column" style="width:80%">
+	<div class="columnLeft" >
 		<div class="institution">EPFL &amp; ETHZ (Swiss Federal Polytechnic Institutes of Lausanne and Zürich)</div>
 		<div class="cv_item_title">Score: 5.48/6.00
 			<a href="https://drive.google.com/file/d/1deLTzAZqEw5AfGQ_8rifewQutq6TIC7A/view" target="_blank">[diploma]</a>
 			<a href="https://drive.google.com/file/d/1ec31Bl4_ujnm9mCvfCloX9unv2syWJPQ/view" target="_blank">[transcript]</a>
 		</div>
 	</div>
-	<div class="column" style="width:20%">
+	<div class="columnRight" >
 		<div class="place">Lausanne/Zürich, Switzerland</div>
 		<div class="date">Oct. 2012 - Aug. 2014</div>
 	</div>
 	<div class="div_clear"> </div>
 
 	<h3>B.Sc. in Physics</h3>
-	<div class="column" style="width:80%">
+	<div class="columnLeft" >
 		<div class="institution">EPFL (Swiss Federal Polytechnic Institute of Lausanne)</div>
 		<div class="cv_item_title">
 			<ul>
@@ -146,20 +131,20 @@
 			</ul>
 		</div>
 	</div>
-	<div class="column" style="width:20%">
+	<div class="columnRight" >
 		<div class="place">Lausanne, Switzerland</div>
 		<div class="date">Sep. 2008 - Sep. 2012</div>
 	</div>
 	<div class="div_clear"> </div>
 
 	<h3>Scientific Baccalauréat (Physics)</h3>
-	<div class="column" style="width:80%">
+	<div class="columnLeft" >
 		<p class="institution">Lycée Dominique Vilars, Gap</p>
 		<div class="cv_item_title">
 			Very Good rating, Score: 16.24/20 <a href="https://drive.google.com/file/d/1oHoROuqI9Fo1uf6jmzNySAH_oVdbvr1G/view" target="_blank">[transcript]</a>
 		</div>
 	</div>
-	<div class="column" style="width:20%">
+	<div class="columnRight" >
 		<div class="place">Gap, France</div>
 		<div class="date">Jun. 2008</div>
 	</div>
@@ -404,24 +389,24 @@
 	<h1>Work Experience </h1> 
 
 	<h3>Post-doctoral Research Fellow</h3>
-	<div class="column" style="width:80%">
+	<div class="columnLeft" >
 		<p class="institution">UNIVERSITY HOSPITAL OF GENEVA (HUG)</p>
 		<div class="cv_item_title">
 			Data Analysis and Clinical Interpretation of Electrical Impedance Tomography lung monitoring data within the CRADL Horizon 2020 program
 		</div>
 	</div>
-	<div class="column" style="width:20%">
+	<div class="columnRight" >
 		<div class="place">Geneva, Switzerland</div>
 		<div class="date">Sep. 2018 - June. 2019</div>
 	</div>
 	<div class="div_clear"> </div>
 
 	<h3>Post-doctoral Research Fellow</h3>
-	<div class="column" style="width:80%">
+	<div class="columnLeft" >
 		<p class="institution">IBERIAN NANOTECHNOLOGY LABORATORY (INL)</p>
 		<div class="cv_item_title">Design and Literature Review of Micro-NMR systems for point-of-care medical applications</div>
 	</div>
-	<div class="column" style="width:20%">
+	<div class="columnRight" >
 		<div class="place">Braga, Portugal</div>
 		<div class="date">Jul. 2018 - Aug. 2018</div>
 	</div>
@@ -433,78 +418,78 @@
 
 	<!--  -->
 	<h3>Research Fellow (Ph.D. student)</h3>
-	<div class="column" style="width:80%">
+	<div class="columnLeft" >
 		<p class="institution">ATOMIC ENERGY COMMISSION (CEA) CADARACHE</p>
 		<div class="cv_item_title">
 			Ph.D. thesis: “Electrical Impedance Tomography for Void Fraction Measurements of Harsh Two-phase Flows: Prototype development and Reconstruction techniques”
 		</div>
 	</div>
-	<div class="column" style="width:20%">
+	<div class="columnRight" >
 		<div class="place">Cadarache, France</div>
 		<div class="date">Oct. 2014 - Sep. 2017</div>
 	</div>
 	<div class="div_clear"> </div>
 
 	<h3>Invited researcher</h3>
-	<div class="column" style="width:80%">
+	<div class="columnLeft" >
 		<p class="institution">UNIVERSITY COLLEGE OF SOUTHEAST NORWAY</p>
 		<div class="cv_item_title">
 			Collaboration with Prof. Mylvaganam, “ECT-based flow regime identification of horizontal gas-liquid flows”
 		</div>
 	</div>
-	<div class="column" style="width:20%">
+	<div class="columnRight" >
 		<div class="place">UCSN, Norway</div>
 		<div class="date">Feb. 2016</div>
 	</div>
 	<div class="div_clear"> </div>
 
 	<h3>M.Sc. thesis and project</h3>
-	<div class="column" style="width:80%">
+	<div class="columnLeft" >
 		<p class="institution">STARS GROUP, PAUL SCHERRER INSTITUTE</p>
 		<div class="cv_item_title">
 			”Extension and validation enhancements of the PSI Fast Neutron Fluence MCNPX based computational scheme using recent KKG experimental data”
 		</div>
 	</div>
-	<div class="column" style="width:20%">
+	<div class="columnRight" >
 		<div class="place">PSI, Switzerland</div>
 		<div class="date">Sep. 2013 - Aug. 2014</div>
 	</div>
 	<div class="div_clear"> </div>
 
 	<h3>M.Sc. internship</h3>
-	<div class="column" style="width:80%">
+	<div class="columnLeft" >
 		<p class="institution">MYRRHA PROJECT, SCK-CEN</p>
 		<div class="cv_item_title">
 			“Automation of a Global Variance Reduction tool”
 		</div>
 	</div>
-	<div class="column" style="width:20%">
+	<div class="columnRight" >
 		<div class="place">SCK-CEN, Belgium</div>
 		<div class="date">May. 2013 - Aug. 2013</div>
 	</div>
 	<div class="div_clear"> </div>
 
 	<h3>B.Sc. internship</h3>
-	<div class="column" style="width:80%">
+	<div class="columnLeft" >
 		<p class="institution">SIR PETER MANSFIELD IMAGING CENTRE, UNIVERSITY OF NOTTINGHAM</p>
 		<div class="cv_item_title">
 			“Development of a miniaturised NMR sensor”
 		</div>
 	</div>
-	<div class="column" style="width:20%">
+	<div class="columnRight" >
 		<div class="place">University of Nottingham, UK</div>
 		<div class="date">Feb. 2012 - Jul. 2012</div>
 	</div>
 	<div class="div_clear"> </div>
 
 	<h3>Treasurer (volunteer)</h3>
-	<div class="column" style="width:80%">
+	<div class="columnLeft" >
 		<p class="institution">CEA CADARACHE</p>
 		<div class="cv_item_title">
 			Treasurer (volunteer) for ASTHEC PH.D. ASSOCIATION AT CEA CADARACHE
 		</div>
 	</div>
-	<div class="column" style="width:20%">
+	<div class="columnRight" >
 		<div class="place">CEA Cadarache, France</div>
 		<div class="date">Apr. 2015 - Apr. 2016</div>
 	</div>
