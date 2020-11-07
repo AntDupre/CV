@@ -8,15 +8,32 @@
 	<!-- My fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
 	<!-- My styles -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- -->
     <link rel="stylesheet" href="css/styles.css">
     <!-- MathJax -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script type="text/javascript">
+		
+		function turnFrench(){
+			console.log("turn to French");
+			[...document.styleSheets[3].cssRules].find(x=> x.selectorText=='.fr').style.display= 'inherit';
+			[...document.styleSheets[3].cssRules].find(x=> x.selectorText=='.en').style.display= 'none';
+		};
+		function turnEnglish(){
+			console.log("turn to English");
+			[...document.styleSheets[3].cssRules].find(x=> x.selectorText=='.fr').style.display= 'none';
+			[...document.styleSheets[3].cssRules].find(x=> x.selectorText=='.en').style.display= 'inherit';
+		};
+		
+	</script>
+	<!-- <script type="text/javascript">turnFrench();</script> -->
 	<style>
 		/* A CSS comment */
-		
-		
+		img:hover {opacity: 0.5;}
+		.fr {display:none;} /* Hidding French*/
+		.en {display:inherit;}
+
 
 		/* text-transform: uppercase */
 	</style>
@@ -27,22 +44,13 @@
 	<a href="https://www.researchgate.net/profile/Antoine_Dupre">ResearchGate profile</a>
 </header>
 -->
-
-	<!-- 
-	<div class="container">	
-		<div class="row">
-			<div class="col-md-4"> My grid test</div>
-			<div class="col-md-4"> My grid test</div>
-			<div class="col-md-4"> My grid test</div>
-		</div>
-	</div>
-	<div style="background: url('res/Photo_CV.jpg') no-repeat; background-position: center; height:100px; width:100px"></div>
-	<div class="div_clear"></div>
-	-->
 <body>
 
 <section id="header">
 		<img src="res/Photo_CV.jpg" alt="my CV photo" height="200" style="float:left">
+		<img src="res/france-flag-button-square-small.png" alt="french-flag" height="30" style="float:right" onclick="turnFrench()">
+		<span style="float:right">&nbsp</span>
+		<img src="res/united-kingdom-flag-button-square-small.png" alt="english-flag" height="30" style="float:right" onclick="turnEnglish()">
 		<div class="en" style="text-align: center;">
 			<!-- ENGLISH -->
 			<div style="font-size:3em; font-family: Roboto, sans-serif; text-align: center">Antoine <b>Dupré</b></div>
@@ -60,9 +68,12 @@
 			<div >Nationalité: French</div>
 		</div>
 		<div style="text-align: center;"> 	
-			<span class="glyphicon glyphicon-phone"></span> (+33) 752636622 | 
-			<span class="glyphicon glyphicon-envelope"> antoine.dupre@alumni.epfl.ch </span>
-			<span class="glyphicon glyphicon-user"></span> <a href="http://www.researchgate.net/profile/Antoine_Dupre"> www.researchgate.net/profile/Antoine_Dupre </a> 
+			<span class="glyphicon glyphicon-phone"></span>
+			<span>(+33)752636622 |</span>
+			<span class="glyphicon glyphicon-envelope"></span>
+			<a href="mailto:antoine.dupre@alumni.epfl.ch"> antoine.dupre@alumni.epfl.ch </a>
+			<span class="glyphicon glyphicon-user"></span> 
+			<a href="http://www.researchgate.net/profile/Antoine_Dupre"> www.researchgate.net/profile/Antoine_Dupre </a> 
 		</div>
 		<div class="div_clear"> </div>
 </section>
@@ -76,8 +87,10 @@
 			<h3 class="en">Software and Algorithms Engineer</h3>
 			<h3 class="fr">Ingénieur Logiciel et Algorithmes</h3>
 			<div class="columnLeft" >
-				<div class="institution">SenTec AG, EIT Branch, Switzerland</div>
-				<div class="cv_item_title">Research and Development of software and algorithms for the EIT lung monitoring system commercialised by SenTec AG.</div>
+				<div class="institution en">SenTec AG, EIT Branch, Switzerland</div>
+				<div class="institution fr">SenTec AG, Groupe EIT, Suisse</div>
+				<div class="cv_item_title en">Research and Development of software and algorithms for the EIT lung monitoring system commercialised by SenTec AG.</div>
+				<div class="cv_item_title fr">Recherche et Développement logiciel et algorithmes pour le système de monitoring ventilatoire (EIT) commercialisé par SenTec AG.</div>
 			</div>
 			<div class="columnRight" >
 				<div class="place">Landquart, Switzerland</div>
