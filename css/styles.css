@@ -9,22 +9,21 @@ body {
 
 .cv_item_title {text-align: justify;}
 .institution {font-weight:bold;} 
-#CurrentSituation .place {color:red; text-align: right;}
-#CurrentSituation .date {color:blue; font-style: italic; text-align: right;}
-#Education .place {color:red; text-align: right;}
-#Education .date {color:blue; font-style: italic; text-align: right;}
+#CurrentSituation .place, #Education .place, #Work_Experience_Recent .place, #Work_Experience .place {color:red; text-align: right;}
+#CurrentSituation .date, #Education .date, #Work_Experience_Recent .date, #Work_Experience .date {color:blue; font-style: italic; text-align: right;}
 #Publications .date {font-weight:bold;}
 #Publications .place {font-style:default;}
 .div_clear { content: ''; display: block; clear: both;}
-.columnLeft { box-sizing: border-box; float: left; padding: 10px; width:80%}
-.columnRight { box-sizing: border-box; float: right; padding: 10px; width:20%}
+.columnLeft { box-sizing: border-box; float: left; padding: 3px 10px 3px 10px; width:80%}
+.columnRight { box-sizing: border-box; float: right; padding: 3px 10px 3px 10px; width:20%}
 
 h3:hover, .date:hover, .place:hover, .cv_item_title:hover, .institution:hover {background-color: #eee}
 img:hover {opacity: 0.5;}
 
-.h2, .h3, h2, h3{
+.h1, .h2, .h3, h1, h2, h3{
 	margin-top: 0px;
 	margin-bottom: 0px;
+	padding: 3px 10px 3px 10px; 
 }
 
 		
