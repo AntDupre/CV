@@ -17,7 +17,7 @@ body {
 .columnLeft { box-sizing: border-box; float: left; padding: 3px 10px 3px 10px; width:80%}
 .columnRight { box-sizing: border-box; float: right; padding: 3px 10px 3px 10px; width:20%}
 
-h3:hover, .date:hover, .place:hover, .cv_item_title:hover, .institution:hover {background-color: #eee}
+.cv_item:hover {background-color: #eee}
 img:hover {opacity: 0.5;}
 
 .h1, .h2, .h3, h1, h2, h3{
@@ -28,12 +28,10 @@ img:hover {opacity: 0.5;}
 
 		
 #header {border: none;}
-/* section {width:90%; padding: 0px 5px 0px 5px; border: 2px solid #000000;} */
 section {margin: 2.5% 5% 2.0% 5% ; padding: 5px 5px 5px 5px; border: 2px solid #000000;}
 
 /*@media (min-width:1200px) { body {width:1000px; border: 5px solid #000000;}  } */
 h1::first-letter {color: #f00;}
-.glyphicon {font-size: 1.2em;}
 
 
 /********** Large devices only **********/
